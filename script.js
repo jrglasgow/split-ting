@@ -166,12 +166,12 @@
           var number = data[index][1];
           if(typeof(number) !== 'undefined') {
             if (number in phoneNumbers && "megabytes" in phoneNumbers[number]) {
-              phoneNumbers[number]['megabytes'] = phoneNumbers[number]['megabytes'] + parseFloat(data[index][3]/1024);
+              phoneNumbers[number]['megabytes'] = phoneNumbers[number]['megabytes'] + parseFloat(data[index][4]/1024);
             } else {
               if (typeof(phoneNumbers[number]) === 'undefined') {
                 phoneNumbers[number] = {}; 
               }
-              phoneNumbers[number]['megabytes'] = parseFloat(data[index][3]/1024);
+              phoneNumbers[number]['megabytes'] = parseFloat(data[index][4]/1024);
             }
           }
         }
